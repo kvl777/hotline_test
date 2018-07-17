@@ -18,4 +18,5 @@ Search on Hotline
 	Click Button		xpath=//*[@id="doSearch"]
 	
 Go to the first link
-	Click Element		xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[1]/div[3]/div/ul/li[1]/div[3]/div/p/a
+	Wait Until Page Contains Element		xpath=//*[@id="page-search"]/div[2]/div/div[1]/div[3]/div/ul/li[1]/div[3]/div/p/a
+	Click Element		xpath=//*[@id="page-search"]/div[2]/div/div[1]/div[3]/div/ul/li[1]/div[3]/div/p/a
