@@ -1,6 +1,6 @@
 *** Settings ***
 Library		Selenium2Library
-Suit Setup		Open Browser	${HOMEPAGE}		${BROWSER}
+Suite Setup		Open Browser	${HOMEPAGE}		${BROWSER}
 
 *** Variables ***
 ${HOMEPAGE}		https://hotline.ua/
@@ -14,8 +14,8 @@ Hotline search for "iPhone 7" and go to the first link
 *** Keywords ***
 Search on Hotline
 	[Arguments]		${searckey}
-	Input Text		id="searchbox"		${searckey}
-	Click Button		id="doSearch"
+	Input Text		xpath=//*[@id="searchbox"]		${searckey}
+	Click Button		xpath=//*[@id="doSearch"]
 	
 Go to the first link
 	Click Element		xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[1]/div[3]/div/ul/li[1]/div[3]/div/p/a
