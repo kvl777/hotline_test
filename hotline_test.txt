@@ -8,10 +8,14 @@ ${BROWSER}		chrome
 
 *** Test Cases ***
 Hotline search for "iPhone 7" and go to the first link
+	Close the location pop-up
 	Search on Hotline		iPhone 7
 	Go to the first link
 
 *** Keywords ***
+Close the location pop-up
+	Click Element		xpath=/html/body/header/div[1]/div/div/div[1]/div/div[2]/div/div[2]/div/i
+	
 Search on Hotline
 	[Arguments]		${searckey}
 	Input Text		xpath=//*[@id="searchbox"]		${searckey}
